@@ -56,16 +56,6 @@
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
           <button • data-modal-open type="button" class="hero-button">Заказать услугу</button>
-          <!-- <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-              <p class="modal-text">При зависании компьютера выдернуть шнур, выдавить стекло</p>
-              <button • data-modal-close class="hero-button-close">
-                <svg class="close-x">
-                  <use href="./images/icons/sprite.svg#close-x"></use>
-                </svg>
-              </button>
-            </div>
-          </div> -->
         </div>
       </section>
       <!-- Преимущества advantages section-->
@@ -491,12 +481,36 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <p class="modal-text">При зависании компьютера выдернуть шнур, выдавить стекло</p>
         <button • data-modal-close class="hero-button-close">
           <svg class="close-x">
             <use href="./images/icons/sprite.svg#close-x"></use>
           </svg>
         </button>
+        <!-- Форма на модалке -->
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <form class="modal-form">
+          <div class="label-text-input">
+            <label class="modal-label"> Имя<input type="text" name="name" class="modal-input" /> </label>
+            <label class="modal-label"> Телефон<input type="phone" name="phone" class="modal-input" /> </label>
+            <label class="modal-label"> Почта<input type="email" name="email" class="modal-input" /> </label>
+            <label class="modal-label"
+              >Комментарий
+              <textarea name="comment" class="modal-comment" placeholder="Введите текст"></textarea>
+            </label>
+          </div>
+          <!-- Чекбокс -->
+          <label class="check-label">
+            <span>
+              <input type="checkbox" name="terms-agreement" class="modal-check" />
+            </span>
+            <span>
+              Соглашаюсь с рассылкой и принимаю
+              <a href="" class="modal-link link">Условия договора</a>
+            </span>
+          </label>
+
+          <button type="submit" class="submit-button">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
