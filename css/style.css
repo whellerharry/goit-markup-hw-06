@@ -352,6 +352,7 @@ body {
 /* оформление чекбокса */
 
 .check-label {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -360,6 +361,34 @@ body {
   font-size: 14px;
   line-height: 2;
   color: var(--secondary-text-color);
+}
+.modal-check {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.check-box {
+  position: absolute;
+  margin-top: 7px;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  left: 0;
+  /* overflow: hidden; */
+  border-radius: 2px;
+  background-color: var(--primary-bg-color);
+  /* background-repeat: no-repeat; */
+  background-position: 50% 50%;
+  box-shadow: 0 0 0 2px var(--primary-text-color);
+}
+
+.modal-check:checked + .check-box {
+  background-color: var(--accent-color);
+  background-image: url(../images/icons/check-icon.svg);
+}
+.modal-check:focus + .check-box {
+  box-shadow: 0 0 0 2px var(--accent-color);
 }
 
 .modal-link {
